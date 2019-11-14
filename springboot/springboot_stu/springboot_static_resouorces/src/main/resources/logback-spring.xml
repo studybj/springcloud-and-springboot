@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    scan:当此属性设置为true时，配置文件如果发生改变，将会被重新加载，默认值为true。
+    scanPeriod:设置监测配置文件是否有修改的时间间隔，如果没有给出时间单位，默认单位是毫秒。当scan为true时，此属性生效。默认的时间间隔为1分钟。
+    debug:当此属性设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。默认值为false。-->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!-- 属性：设置上下文名称，每个logger都关联到logger上下文，默认上下文名称为“default”。-->
+    <contextName>logback</contextName>
+    <!--property定义变量值,通过该属性定义的值会被插入到logger上下文中。定义变量后，可以通过“${}”来使用变量。-->
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
+    <property name="log.path" value="D:\\test\\log\\logback.log" />
+    <!--appender用来格式化日志输出节点，有俩个属性name和class，
+    class用来指定哪种输出策略，常用就是控制台输出策略和文件输出策略。-->
+    <!--输出到控制台-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!--ThresholdFilter为系统定义的拦截器，例如我们用ThresholdFilter来过滤掉ERROR级别以下的日志不输出到文件中。如果不用记得注释掉，不然你控制台会发现没日志~-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <encoder><!--<encoder>表示对日志进行编码-->
+            <!--<pattern>%d %p (%file:%line\)- %m%n</pattern>-->
+            <!--格式化输出：%d:表示日期    %thread:表示线程名     %-5level:级别从左显示5个字符宽度  %msg:日志消息    %n:是换行符-->
+            <!--<pattern>控制台-%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger - %msg%n</pattern>-->
+            <pattern>%black(控制台-) %red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger) - %cyan(%msg%n)</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+
+    <!--输出到文件,RollingFileAppender用于切分文件日志-->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--定义了日志的切分方式——把每一天的日志归档到一个文件中-->
+            <fileNamePattern>logback.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--表示只保留最近30天的日志，以防止日志填满整个磁盘空间-->
+            <maxHistory>30</maxHistory>
+            <!--用来指定日志文件的上限大小，例如设置为1GB的话，那么到了这个值，就会删除旧的日志-->
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <!--格式化输出：%d:表示日期    %thread:表示线程名     %-5level:级别从左显示5个字符宽度  %msg:日志消息    %n:是换行符-->
+            <pattern>文件记录-%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+    <!--root节点是必选节点，用来指定最基础的日志输出级别-->
+    <root level="info">
+        <!--<root>可以包含零个或多个<appender-ref>元素，标识这个appender将会添加到这个logger-->
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+    </root>
+    <!--<logger>用来设置某一个包或者具体的某一个类的日志打印级别、以及指定<appender>，
+    name用来指定此logger约束的包或类，其中additivity表示向上级传递打印消息，默认为true-->
+    <!--若不指定level和additivity，则继承root的级别和输出打印消息，反之，则按照自己的级别和输出打印消息-->
+    <logger name="com.bj.study.springboot.controller"/>
+    <!--若additivity为true，则会输出两次打印信息，本身一次，传递root一次-->
+    <logger name="com.bj.study.springboot.util.LogTestController" level="WARN" additivity="false">
+        <appender-ref ref="console" />
+    </logger>
+</configuration>

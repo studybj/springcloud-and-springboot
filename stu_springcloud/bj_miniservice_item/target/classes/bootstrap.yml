@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: miniservice-item  # 此处的值和前面准备工作中
+      uri: http://127.0.0.1:7788
+      profile: dev   #对应配置服务的环境
+      label: master   #对应的分支

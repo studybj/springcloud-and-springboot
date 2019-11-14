@@ -1,0 +1,11 @@
+本项目结合https://blog.csdn.net/swpu_ocean/article/details/81436075
+实现基于SSM的springboot的博客项目
+
+1.集成mybatis
+    添加依赖
+    dao接口，数据源配置
+2.jsp
+    添加依赖
+    配置前缀后缀，及webapp结构
+2.集成shiro
+    添加依赖

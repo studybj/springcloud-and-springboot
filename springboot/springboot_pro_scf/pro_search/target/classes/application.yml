@@ -1,0 +1,14 @@
+server:
+  port: 9308
+spring:
+  application:
+    name: pro-search
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300  #服务器地址，java走端口9300
+eureka:
+  client:
+    service-url:    #Eureka客户端与服务端交互的地址
+      defaultZone: http://localhost:9000/eureka/
+  instance:
+    prefer-ip-address: true   #模块之间支持跨域

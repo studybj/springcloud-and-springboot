@@ -1,0 +1,12 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: order-config-server
+  profile:
+      active: native	# 表示配置文件的获取方式，本地获取
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared # 本地配置文件存放的路径

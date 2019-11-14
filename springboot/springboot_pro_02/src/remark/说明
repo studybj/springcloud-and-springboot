@@ -1,0 +1,28 @@
+https://www.bilibili.com/video/av50200264?p=7
+1.使用模板引擎thymeleaf来做前端
+    直接在pom.xml文件中添加依赖
+    在templates目录下新建页面编写，根据controller返回特定页面
+2.使用OkHttp实现get、post请求(未引入)
+    引入相关依赖
+    查看文档使用
+3.热部署
+    在pom中引入依赖devtools
+    在pom的build中添加
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+        <!-- 没有该配置，devtools 不生效 -->
+            <fork>true</fork>
+        </configuration>
+    </plugin>
+
+
+
+应用中的快捷键
+    最大化编辑页面/恢复  Ctrl + Shift + F12
+    调试并查看页面       Ctrl + Shift + F10
+    换行                Shift + Enter
+    切换最近操作的文件   Ctrl + e
+    在多行指定位置新增相同内容       Alt + 鼠标下移多行
+    pom文件搜索已使用过的依赖       Alt + Insert

@@ -1,0 +1,22 @@
+server:
+  port: 9303
+spring:
+  application:
+    name: pro-gathering  #指定服务名
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_module?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    #hibernate:
+      #ddl-auto: update
+    #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect  #不加这句则默认为myisam引擎
+eureka:
+  client:
+    service-url:    #Eureka客户端与服务端交互的地址
+      defaultZone: http://localhost:9000/eureka/
+  instance:
+    prefer-ip-address: true   #模块之间支持跨域

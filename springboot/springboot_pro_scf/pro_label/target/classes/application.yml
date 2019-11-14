@@ -1,0 +1,24 @@
+server:
+  port: 9304
+spring:
+  application:
+    name: pro-label  #指定服务名
+  datasource:
+    url: jdbc:mysql://192.168.1.198:3306/tensquare_base?characterEncoding=utf-8
+    #jdbc:mysql://localhost:3306/db_module?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+  redis:
+      host: 192.168.1.198
+#eureka:
+#  client:
+#    service-url:    #Eureka客户端与服务端交互的地址
+#      defaultZone: http://localhost:9000/eureka/
+#  instance:
+#    prefer-ip-address: true   #模块之间支持跨域

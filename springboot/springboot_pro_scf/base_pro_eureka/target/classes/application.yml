@@ -1,0 +1,16 @@
+server:
+  port: 9000
+spring:
+  freemarker:
+    prefer-file-system-access: false  #是否优先从文件系统加载template
+  application:
+    name: pro-eureka    #配置该应用程序的名称
+eureka:
+  instance:
+      hostname: localhost
+  client:
+    register-with-eureka: false   #是否把当前模块注册到服务器中，本身就是服务器，所以为false
+    fetch-registry: false     #是否从EurekaServer中获取注册信息
+    service-url:    #Eureka客户端与服务端交互的地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+ #以上的配置信息为配置单节点的Eureka，若要配置多节点，参考applicatio-more-eureka.yml

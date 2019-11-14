@@ -1,0 +1,23 @@
+server:
+  port: 9311
+spring:
+  application:
+    name: pro-user
+  datasource:
+    url: jdbc:mysql://192.168.1.198:3306/tensquare_user?characterEncoding=utf-8
+    #jdbc:mysql://localhost:3306/db_module?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+  redis:
+    host: 192.168.1.198
+  rabbitmq:
+    host: 192.168.1.198
+jwt:
+  config:
+    key: study  #盐
+    ttl: 1800000 #过期时间 毫秒  30分钟
+

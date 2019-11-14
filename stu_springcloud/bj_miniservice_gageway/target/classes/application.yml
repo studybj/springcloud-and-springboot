@@ -1,0 +1,24 @@
+server:
+  port: 7792
+spring:
+  application:
+    name: bj-miniservice-gateway   #指定微服务的名称，即注册到注册中心的名称
+eureka:
+  client:
+    register-with-eureka: true   #是否将自己注册到Eureka服务中
+    fetch-registry: true   #是否从Eureka中获取注册信息
+    service-url:  #Eureka客户端与server进行交互的地址
+      defaultZone: http://user:123@127.0.0.1:7790/eureka/
+    instance:
+      prefer-ip-address: true   #将自己的ip地址注册到Eureka注册中心
+#开始写路由规则
+zuul:
+  routes:
+    bj-miniservice-item:    # 对应的微服务(可随意命名)
+      path: /item-service/**       # 配置请求url的规则
+      #url: http://127.0.0.1:7788  # 真正的微服务地址
+      serviceId: bj-miniservice-item  #对应的微服务id
+    bj-miniservice-order:    # 对应的微服务
+          path: /order-service/**       # 配置请求url的规则
+          #url: http://127.0.0.1:7789  # 真正的微服务地址
+          serviceId: bj-miniservice-order  #对应的微服务id

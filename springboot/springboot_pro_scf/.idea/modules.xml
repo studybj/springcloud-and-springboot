@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/base_pro_common/base_pro_common.iml" filepath="$PROJECT_DIR$/base_pro_common/base_pro_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base_pro_config/base_pro_config.iml" filepath="$PROJECT_DIR$/base_pro_config/base_pro_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base_pro_eureka/base_pro_eureka.iml" filepath="$PROJECT_DIR$/base_pro_eureka/base_pro_eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base_pro_manager/base_pro_manager.iml" filepath="$PROJECT_DIR$/base_pro_manager/base_pro_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base_pro_web/base_pro_web.iml" filepath="$PROJECT_DIR$/base_pro_web/base_pro_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_article/pro_article.iml" filepath="$PROJECT_DIR$/pro_article/pro_article.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_friend/pro_friend.iml" filepath="$PROJECT_DIR$/pro_friend/pro_friend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_gathering/pro_gathering.iml" filepath="$PROJECT_DIR$/pro_gathering/pro_gathering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_label/pro_label.iml" filepath="$PROJECT_DIR$/pro_label/pro_label.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_qa/pro_qa.iml" filepath="$PROJECT_DIR$/pro_qa/pro_qa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_recruit/pro_recruit.iml" filepath="$PROJECT_DIR$/pro_recruit/pro_recruit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_search/pro_search.iml" filepath="$PROJECT_DIR$/pro_search/pro_search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_sms/pro_sms.iml" filepath="$PROJECT_DIR$/pro_sms/pro_sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_spit/pro_spit.iml" filepath="$PROJECT_DIR$/pro_spit/pro_spit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro_user/pro_user.iml" filepath="$PROJECT_DIR$/pro_user/pro_user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_pro_scf.iml" filepath="$PROJECT_DIR$/springboot_pro_scf.iml" />
+    </modules>
+  </component>
+</project>

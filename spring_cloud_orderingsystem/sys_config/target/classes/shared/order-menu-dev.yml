@@ -1,0 +1,25 @@
+server:
+  port: 9004
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/
+  instance:
+      prefer-ip-address: true
+spring:
+  application:
+    name: order-menu
+  redis:
+    host: localhost
+    port: 6379
+#配置数据源和MyBatis
+  datasource:
+    name: su_order
+    url: jdbc:mysql://localhost:3306/su_order?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.bj.stu.entity

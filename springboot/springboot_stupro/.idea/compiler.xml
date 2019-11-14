@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="base_pro_common" />
+        <module name="base_pro_eureka" />
+        <module name="base_pro_zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="base_pro_common" target="1.8" />
+      <module name="base_pro_eureka" target="1.8" />
+      <module name="base_pro_zuul" target="1.8" />
+      <module name="springboot_stupro" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: order-account
+  redis:
+    host: localhost
+    port: 6379
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/
+  instance:
+      prefer-ip-address: true
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.bj.stu.entity

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bj_miniservice_config" />
+        <module name="bj_miniservice_eureka" />
+        <module name="bj_miniservice_gageway" />
+        <module name="bj_miniservice_item" />
+        <module name="bj_miniservice_order" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="bj_miniservice_config" target="1.8" />
+      <module name="bj_miniservice_eureka" target="1.8" />
+      <module name="bj_miniservice_gageway" target="1.8" />
+      <module name="bj_miniservice_item" target="1.8" />
+      <module name="bj_miniservice_order" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bj.study.springboot.dao.UserXmlMapper">
+    <select id="getAllUsers4" resultType="com.bj.study.springboot.entity.User">
+        SELECT * FROM sys_user
+    </select>
+
+    <insert id="create" parameterType="com.bj.study.springboot.entity.User" >
+        INSERT INTO sys_user (id,usercode,username,password,salt,locked) VALUES
+        (#{id}, #{usercode}, #{username}, #{password}, #{salt}, #{locked})
+    </insert>
+
+    <delete id="deleteByName" parameterType="java.lang.String" >
+        DELETE FROM sys_user WHERE username=#{username}
+    </delete>
+    <delete id="deleteById" parameterType="java.lang.String" >
+        DELETE FROM sys_user WHERE id=#{id}
+    </delete>
+    <select id="getById" parameterType="java.lang.String" resultType="com.bj.study.springboot.entity.User">
+        select id,usercode,username,password,salt,locked from sys_user where id = #{id}
+    </select>
+    <update id="update" parameterType="com.bj.study.springboot.entity.User">
+        update sys_user set username = #{username} where id = #{id}
+    </update>
+</mapper>

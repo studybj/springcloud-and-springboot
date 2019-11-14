@@ -1,0 +1,13 @@
+server:
+  port: 7790
+eureka:
+  client:
+    register-with-eureka: false   #是否将自己注册到Eureka服务中，自己就是无需注册
+    fetch-registry: false   #是否从Eureka中获取注册信息
+    service-url:  #Eureka客户端与server进行交互的地址
+      defaultZone: http://127.0.0.1:${server.port}/eureka/
+spring:
+  security:
+    user:
+      name: user
+      password: 123

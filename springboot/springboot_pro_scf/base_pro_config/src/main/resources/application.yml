@@ -1,0 +1,17 @@
+server:
+  port: 9200
+spring:
+  application:
+    name: pro-web
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/git账号/项目名.git    #配置文件存放git的访问路径
+  rabbitmq:
+    host: localhost   #bus需要消息队列
+management:   #暴露触发消息总线的地址
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sys_account" />
+        <module name="sys_common" />
+        <module name="sys_config" />
+        <module name="sys_eurekaserver" />
+        <module name="sys_menu" />
+        <module name="sys_order" />
+        <module name="sys_user" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="spring_cloud_orderingsystem" target="1.8" />
+      <module name="sys_account" target="1.8" />
+      <module name="sys_common" target="1.8" />
+      <module name="sys_config" target="1.8" />
+      <module name="sys_eureka_server" target="1.8" />
+      <module name="sys_eurekaserver" target="1.8" />
+      <module name="sys_menu" target="1.8" />
+      <module name="sys_order" target="1.8" />
+      <module name="sys_user" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

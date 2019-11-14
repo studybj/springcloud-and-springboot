@@ -1,0 +1,12 @@
+server:
+  port: 7793
+spring:
+  application:
+    name: bj-miniservice-config  # 指定服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://gitxxxxxxxxxxxxxxxxxx # 指定git仓库地址
+          #username: user  #若仓库是公开的，无需配置，若私有的，则需指定
+          #password: 123   # 若仓库是公开的，无需配置，若私有的，则需指定

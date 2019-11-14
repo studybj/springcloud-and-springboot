@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: order-account
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:9001
+      fail-fast: true

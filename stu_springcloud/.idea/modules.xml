@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bj_miniservice_config/bj_miniservice_config.iml" filepath="$PROJECT_DIR$/bj_miniservice_config/bj_miniservice_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bj_miniservice_eureka/bj_miniservice_eureka.iml" filepath="$PROJECT_DIR$/bj_miniservice_eureka/bj_miniservice_eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bj_miniservice_gageway/bj_miniservice_gageway.iml" filepath="$PROJECT_DIR$/bj_miniservice_gageway/bj_miniservice_gageway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bj_miniservice_item/bj_miniservice_item.iml" filepath="$PROJECT_DIR$/bj_miniservice_item/bj_miniservice_item.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bj_miniservice_order/bj_miniservice_order.iml" filepath="$PROJECT_DIR$/bj_miniservice_order/bj_miniservice_order.iml" />
+    </modules>
+  </component>
+</project>

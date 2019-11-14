@@ -1,0 +1,22 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: order-config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/studybj/config-rep.git
+##          seatchPaths: /
+  profiles:
+    active: native	# 表示配置文件的获取方式，本地获取
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/

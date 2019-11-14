@@ -1,0 +1,17 @@
+server:
+  port: 9100
+spring:
+  application:
+    name: pro-zuul
+eureka:
+  client:
+    service-url:    #Eureka客户端与服务端交互的地址
+      defaultZone: http://localhost:9000/eureka/
+  instance:
+    prefer-ip-address: true     #模块之间支持跨域
+zuul:
+  routes:       #指定微服务及访问的路径跳转到的模块
+    pro-base:         #指定微服务
+      path: /base/**  #指定微服务的访问路径
+      serviceId: pro-base   #上面指定的路径则跳转到该模块，即指定Eureka注册中心的服务id
+

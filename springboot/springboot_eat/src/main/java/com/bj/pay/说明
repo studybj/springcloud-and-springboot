@@ -1,0 +1,10 @@
+本包说明
+该包是通过best-pay-sdk第三方SDK实现支付功能的，具体实现方式为：
+    1.引入beak-pay-sdk的依赖
+    2.添加配置文件wx.properties 及注入WechatAccConfig，WechatPayConfig
+    3.调用方法pay支付,具体见PayServiceImpl中create方法
+    4.动态注入参数在控制层返回预支付页面，
+        通过若模板引擎为jsp，则在指定路径下创建，若为freemarker或Thymeleaf时，则在template中根据模板引擎创建模板，
+        如通过freemarker，则为pay/create.ftr
+    5.发起支付，在页面中点击确认支付，并发起异步通知结束后返回通知微信商户平台已修改
+    6.退款

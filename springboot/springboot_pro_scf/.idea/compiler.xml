@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="base_pro_common" />
+        <module name="base_pro_config" />
+        <module name="base_pro_eureka" />
+        <module name="base_pro_manager" />
+        <module name="base_pro_web" />
+        <module name="pro_article" />
+        <module name="pro_base_common" />
+        <module name="pro_base_eureka" />
+        <module name="pro_common" />
+        <module name="pro_friend" />
+        <module name="pro_gathering" />
+        <module name="pro_label" />
+        <module name="pro_qa" />
+        <module name="pro_recruit" />
+        <module name="pro_search" />
+        <module name="pro_sms" />
+        <module name="pro_spit" />
+        <module name="pro_user" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="base_pro_common" target="1.8" />
+      <module name="base_pro_config" target="1.8" />
+      <module name="base_pro_eureka" target="1.8" />
+      <module name="base_pro_manager" target="1.8" />
+      <module name="base_pro_web" target="1.8" />
+      <module name="pro_article" target="1.8" />
+      <module name="pro_base_common" target="1.8" />
+      <module name="pro_base_eureka" target="1.8" />
+      <module name="pro_common" target="1.8" />
+      <module name="pro_friend" target="1.8" />
+      <module name="pro_gathering" target="1.8" />
+      <module name="pro_label" target="1.8" />
+      <module name="pro_qa" target="1.8" />
+      <module name="pro_recruit" target="1.8" />
+      <module name="pro_scf_partent" target="1.8" />
+      <module name="pro_search" target="1.8" />
+      <module name="pro_sms" target="1.8" />
+      <module name="pro_spit" target="1.8" />
+      <module name="pro_user" target="1.8" />
+      <module name="springboot_pro_scf" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

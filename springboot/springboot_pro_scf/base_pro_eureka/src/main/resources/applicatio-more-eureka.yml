@@ -1,0 +1,47 @@
+---
+#若要配置多节点的Eureka，使得server间可互相注册形成server集群，如下有3个server的配置
+spring:
+  application:
+    name: pro-eureka
+  profiles: server1
+server:
+  port: 9000
+#需注意本地测试，由于是个单节点(即只有本地的ip),若使用相同的ip地址注册到Eureka server会失败，
+#所以可以在system32/host文件下将不同的服务名指向同一ip来进行测试，即在host文件中添加：
+#127.0.0.1 server1 127.0.0.1 server2 127.0.0.1 server3  (将ip地址指向主机名)
+# 打包，启动服务并指定profiles 分别启动即可
+eureka:
+  instance: #配置Eureka实例信息
+    hostname: server1 #服务名
+    prefer-ip-address: false #是否使用ip地址注册
+  client:
+    service-url:    #Eureka客户端与服务端交互的地址
+      defaultZone: http://server2:9001/eureka/,http://server3:9002/eureka/
+---
+spring:
+  application:
+    name: pro-eureka
+  profiles: server2
+server:
+  port: 9001
+eureka:
+  instance:
+    hostname: server2
+    prefer-ip-address: false
+  client:
+    service-url:    #Eureka客户端与服务端交互的地址
+      defaultZone: http://server1:9000/eureka/,http://server3:9002/eureka/
+---
+spring:
+  application:
+    name: pro-eureka
+  profiles: server3
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: server3
+    prefer-ip-address: false
+  client:
+    service-url:    #Eureka客户端与服务端交互的地址
+      defaultZone: http://server1:9000/eureka/,http://server2:9001/eureka/

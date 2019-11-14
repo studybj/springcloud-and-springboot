@@ -1,0 +1,9 @@
+1.引入依赖说明
+    SpringBoot DevTools: 热部署依赖
+    lombok:默认日志，在resources下创建日志配置文件
+    Spring Web Starter:Web基础，包含了SpringMVC及Spring
+    Thymeleaf：模板引擎，在resources/Templates下创建页面模板
+    MySql：数据库支持,配置文件中配置数据库相关信息
+    Mybatis：持久化
+    Redis：菲关系型数据库支持
+
